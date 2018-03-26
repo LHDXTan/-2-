@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />
+    <package name="default" namespace="/" extends="struts-default">
+        <!--struts2.5 为了提升安全性，添加了 allomethod -->
+        <global-allowed-methods>regex:.*</global-allowed-methods>
+        <!-- name action的名字，访问时使用action.action访问，class：实现类 -->
+        <action name="action" class="action.StudentAction">
+            <!-- 结果集，即action中SUCCESS返回的视图 -->
+            <result>
+                /jquery-easyui-1.5.4.2/demo/datagrid/clientpagination.jsp
+            </result>
+        </action>
+        <action name="student" class="action.StudentAction">
+            <result name="add">
+                /jquery-easyui-1.5.4.2/demo/datagrid/clientpagination.jsp
+            </result>
+        </action>
+
+    </package>
+</struts>
