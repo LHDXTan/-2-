@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Validate On Blur - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../demo.css">
+	<script type="text/javascript" src="../../jquery.min.js"></script>
+	<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>Validate On Blur</h2>
+	<p>Active validation on first blur event.</p>
+	<div style="margin:20px 0;"></div>
+	<div class="easyui-panel" title="Register" style="width:100%;max-width:400px;padding:30px 60px;">
+		<div style="margin-bottom:20px">
+			<label for="name" class="label-top">姓名:</label>
+			<input id="name" name="student.name" class="easyui-validatebox tb" data-options="required:true,validType:'length[3,10]',validateOnCreate:false,validateOnBlur:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<label for="sex" class="label-top">性别:</label>
+			<input id="sex" name="student.sex" class="easyui-validatebox tb" data-options="required:true,validType:'email',validateOnCreate:false,validateOnBlur:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<label for="age" class="label-top">年龄:</label>
+			<input id="age" name="student.age" class="easyui-validatebox tb" data-options="required:true,validType:'url',validateOnCreate:false,validateOnBlur:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<label for="birthday" class="label-top">生日:</label>
+			<input id="birthday" name="studnet.birthday" class="easyui-validatebox tb" data-options="required:true,validateOnCreate:false,validateOnBlur:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<label for="zhuanye" class="label-top">电话:</label>
+			<input id="zhuanye" name="student.zhuanye" class="easyui-validatebox tb" data-options="required:true,validateOnCreate:false,validateOnBlur:true">
+		</div>
+	</div>
+	<style scoped="scoped">
+		.tb{
+			width:100%;
+			margin:0;
+			padding:5px 4px;
+			border:1px solid #ccc;
+			box-sizing:border-box;
+		}
+	</style>
+
+</body>
+</html>
